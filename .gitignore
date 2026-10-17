@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+# Paczka .skill nie jest potrzebna (Claude.ai przyjmuje ZIP z dist/).
+dist/*.skill
+# Wyniki prawdziwych audytów nie powinny trafiać do publicznego repozytorium.
+raport-widocznosc-ai-*.md
+wyniki-*.json
+pytania-*.txt
+!evals/files/*.json
