@@ -1,0 +1,71 @@
+{
+  "skill_name": "widocznosc-w-ai",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Cześć, prowadzę ScaleUP AI, wdrażamy systemy AI i automatyzacje dla polskich firm usługowych B2B. Sprawdź, czy moja firma jest widoczna w ChatGPT i innych AI: https://systemyai.pl . Chcę wiedzieć, kogo AI poleca zamiast mnie.",
+      "expected_output": "Claude przed użyciem narzędzi zapisuje migawkę pamięci marki, krótko streszcza ustalenia o firmie, układa 20 pytań niebrandowych bez nazwy firmy plus 3 o markę, robi tryb bez internetu po ułożeniu pytań, a przed ich wyszukiwaniem, sprawdza pytania z budżetem 1 wyszukiwania na pytanie, stosuje regułę włączenia firmy na listę i rozróżnia firmy od katalogów, zapisuje JSON zgodny ze schematem, liczy metryki skryptem z --md, robi check techniczny i oddaje raport według szablonu. Jeśli narzędzie pobierania zwraca ROBOTS_DISALLOWED, raport opisuje to jako ważne ustalenie techniczne (pośredni sygnał blokady botów AI) z konkretnym działaniem.",
+      "files": [],
+      "expectations": [
+        "Raport zaczyna się zdaniem w formacie 'Pojawiasz się w X z N odpowiedzi (Y%)'",
+        "Plik wyników zawiera pole migawka_pamieci",
+        "Żadne pytanie niebrandowe nie zawiera nazwy firmy ani nazwiska właściciela",
+        "Claude nie szuka w sieci informacji o właścicielu jako osobie prywatnej",
+        "Pytania o markę są opisane osobno i nie wchodzą do wskaźnika widoczności",
+        "Raport mówi wprost, że to symulacja Claude z wyszukiwaniem, a nie odpowiedzi ChatGPT",
+        "Raport zawiera tabelę firm pojawiających się zamiast sprawdzanej firmy z liczbą pytań",
+        "Katalogi i marketplace'y (np. Useme, Clutch) są w źródłach, a nie na liście firm",
+        "Jeśli wystąpił ROBOTS_DISALLOWED, check techniczny opisuje go jako sygnał blokady botów AI i mówi, co sprawdzić w robots.txt",
+        "Każde z 5 działań odwołuje się do konkretnej liczby lub ustalenia z tego audytu",
+        "pytania-<firma>.txt ma nagłówek z nazwą i datą, pytania z id oraz osobną sekcję 'Pytania o markę'",
+        "Plik wyników przechodzi przez licz_wynik.py bez błędów",
+        "W całym raporcie nie ma pauz ani półpauz (znaki U+2014 i U+2013)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "czy AI poleca moją firmę? nazywa się Fizjo-Med, jesteśmy w Lublinie",
+      "expected_output": "Claude bez dopytywania wyszukuje nazwę z miastem, żeby znaleźć stronę i ustalić branżę (fizjoterapia, lokalnie Lublin). Jeśli znajdzie kilka różnych firm o tej nazwie, zadaje jedno krótkie pytanie, o którą chodzi. Potem prowadzi audyt jak zwykle, a pytania zawierają Lublin w większości przypadków. Nie wymyśla wzmianek: jeśli firma nie pada w wynikach, wynik jest niski i uczciwie opisany.",
+      "files": [],
+      "expectations": [
+        "Claude najpierw próbuje ustalić branżę i stronę przez wyszukiwanie, zamiast zadawać serię pytań",
+        "Podsumowanie ustaleń o firmie ma najwyżej kilka linijek",
+        "Większość pytań niebrandowych zawiera Lublin lub region",
+        "Pytania brzmią potocznie, jak wiadomość klienta do ChatGPT, i mają różną długość",
+        "Każda firma wpisana do wyników ma pokrycie w źródłach z wyszukiwania",
+        "Ocena robocza jest opisana jako heurystyka, nie standard branżowy"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Miesiąc temu zrobiłeś mi test widoczności w AI, w załączniku plik z wynikami. Powtórz go i powiedz, co się zmieniło. W międzyczasie dodałem firmę do Panoramy Firm.",
+      "expected_output": "Claude wczytuje plik evals/files/wyniki-kalkulus-2026-09-17.json, używa dokładnie tych samych pytań (te same id, treść i kategorie, bez nowych pytań), sprawdza je w tych samych trybach, zapisuje nowy plik wyników i uruchamia licz_wynik.py z --poprzedni. Firma Kalkulus i jej konkurenci są fikcyjni, więc prawdziwe wyszukiwanie ich nie znajdzie: poprawne zachowanie to uczciwy, niski wynik i jasna informacja, że w wynikach nie ma ani firmy, ani jej strony, a nie przepisanie starych wyników.",
+      "files": [
+        "evals/files/wyniki-kalkulus-2026-09-17.json"
+      ],
+      "expectations": [
+        "Nowy plik wyników ma te same id i treści pytań co plik poprzedni",
+        "Uruchomiono licz_wynik.py z opcją --poprzedni (albo, bez wykonywania kodu, porównano ręcznie widoczność w każdym trybie)",
+        "Raport podaje zmianę w punktach procentowych względem 2026-09-17",
+        "Raport wspomina, że zmiana o najwyżej 2 pytania przy 10 (około 20 p.p.) może być zwykłą zmiennością odpowiedzi AI",
+        "Claude nie kopiuje starych wyników do nowego pliku i nie wymyśla wzmianek o fikcyjnej firmie",
+        "Raport odnosi się do informacji o Panoramie Firm na podstawie tego, czy panoramafirm.pl pojawił się w źródłach"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "szybki test: czy AI poleca inFakt jak ktoś szuka księgowości online dla jdg?",
+      "expected_output": "Claude robi szybki test (10 pytań niebrandowych + 2 o markę). Konkurentów nie podano, więc może wskazać oczywistych (np. wFirma, ifirma) w konkurenci_wywnioskowani i to opisuje. Programy do księgowości online liczą się jako firmy, katalogi i marketplace'y jako źródła. Pod główną liczbą jest jedno zdanie bezpośredniej odpowiedzi tak/nie, a interpretacja porównuje inFakt z największymi konkurentami z tabeli, nie tylko z progami.",
+      "files": [],
+      "expectations": [
+        "Test ma 10 pytań niebrandowych i 2 pytania o markę",
+        "Pod główną liczbą jest jedno zdanie bezpośredniej odpowiedzi na pytanie tak/nie",
+        "Interpretacja porównuje wynik z 2-3 największymi konkurentami z tabeli",
+        "Wywnioskowani konkurenci są w polu konkurenci_wywnioskowani, a raport mówi, że wskazał ich Claude",
+        "Różne zapisy tej samej firmy (np. iFirma.pl i ifirma) nie są liczone jako dwie firmy",
+        "Każde pytanie ma najwyżej 7 firm",
+        "Jeśli skrypt zgłosił zależność od pojedynczych źródeł, raport podaje to jako zastrzeżenie"
+      ]
+    }
+  ]
+}
