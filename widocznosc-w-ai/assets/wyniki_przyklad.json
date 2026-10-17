@@ -1,0 +1,339 @@
+{
+  "wersja_schematu": 1,
+  "_opis": "Dane fikcyjne, tylko do testu skryptu licz_wynik.py. Firma Kalkulus, jej konkurenci i domeny z końcówką -przyklad.pl nie istnieją. Tryb pamiec jest celowo tylko przy części pytań, żeby pokazać, że tryby liczą się osobno; w prawdziwym teście wpisz go dla każdego pytania.",
+  "data": "2026-10-17",
+  "srodowisko": "Claude.ai z wyszukiwaniem w sieci",
+  "migawka_pamieci": {
+    "zna_firme": false,
+    "co_wiem": []
+  },
+  "firma": {
+    "nazwa": "Biuro Rachunkowe Kalkulus sp. z o.o.",
+    "aliasy": [
+      "Kalkulus",
+      "Biuro Kalkulus"
+    ],
+    "strona": "https://www.kalkulus-przyklad.pl",
+    "nazwa_opisowa": false,
+    "uslugi": [
+      "pełna księgowość",
+      "KPiR i ryczałt dla JDG",
+      "kadry i płace"
+    ],
+    "dla_kogo": "jednoosobowe działalności i małe spółki",
+    "zasieg": "lokalny: Poznań i okolice",
+    "konkurenci": [
+      "Biuro Rachunkowe Alfa",
+      "Delta Finanse"
+    ],
+    "konkurenci_wywnioskowani": []
+  },
+  "aliasy_firm": {
+    "Biuro Rachunkowe Alfa": [
+      "Alfa Księgowość",
+      "BR Alfa"
+    ]
+  },
+  "pytania": [
+    {
+      "id": "P01",
+      "kategoria": "polecenie",
+      "tresc": "polecisz dobre biuro rachunkowe w Poznaniu dla jednoosobowej działalności?",
+      "wyniki": {
+        "wyszukiwanie": {
+          "zapytania": [
+            "biuro rachunkowe Poznań JDG polecane"
+          ],
+          "firmy": [
+            "Biuro Rachunkowe Alfa",
+            "Delta Finanse sp. z o.o.",
+            "Kalkulus"
+          ],
+          "zrodla": [
+            "https://panoramafirm.pl/biura_rachunkowe/wielkopolskie,,poznań",
+            "https://www.google.com/maps/search/biuro+rachunkowe+poznań",
+            "https://www.kalkulus-przyklad.pl/oferta"
+          ],
+          "notatka": "Kalkulus w wynikach Map Google i na własnej stronie z ofertą dla JDG."
+        },
+        "pamiec": {
+          "firmy": [
+            "Biuro Rachunkowe Alfa",
+            "Omega Księgowi"
+          ]
+        }
+      }
+    },
+    {
+      "id": "P02",
+      "kategoria": "polecenie",
+      "tresc": "szukam księgowej w Poznaniu, kogoś godnego zaufania, kogo byś polecił",
+      "wyniki": {
+        "wyszukiwanie": {
+          "zapytania": [
+            "dobra księgowa Poznań opinie"
+          ],
+          "firmy": [
+            "Księgowość Gamma s.c.",
+            "Alfa Księgowość",
+            "Omega Księgowi"
+          ],
+          "zrodla": [
+            "https://www.oferteo.pl/biura-rachunkowe/poznan",
+            "https://www.google.com/maps/place/ksiegowosc-gamma"
+          ]
+        },
+        "pamiec": {
+          "firmy": [
+            "Biuro Rachunkowe Alfa"
+          ]
+        }
+      }
+    },
+    {
+      "id": "P03",
+      "kategoria": "problem",
+      "tresc": "toniemy w fakturach i nie ogarniamy ZUS-ów, kto w Poznaniu może to wziąć na siebie?",
+      "wyniki": {
+        "wyszukiwanie": {
+          "zapytania": [
+            "obsługa księgowa i ZUS dla małej firmy Poznań"
+          ],
+          "firmy": [
+            "Delta Finanse",
+            "Biuro Kalkulus",
+            "Ksiegowosc Gamma"
+          ],
+          "zrodla": [
+            "https://www.oferteo.pl/obsluga-ksiegowa/poznan",
+            "https://deltafinanse-przyklad.pl/"
+          ]
+        },
+        "pamiec": {
+          "firmy": [
+            "Delta Finanse"
+          ]
+        }
+      }
+    },
+    {
+      "id": "P04",
+      "kategoria": "problem",
+      "tresc": "mam małą firmę budowlaną pod Poznaniem i tonę w papierach, gdzie znajdę kogoś do księgowości i kadr?",
+      "wyniki": {
+        "wyszukiwanie": {
+          "zapytania": [
+            "księgowość i kadry dla firmy budowlanej Poznań"
+          ],
+          "firmy": [
+            "Omega Księgowi",
+            "Biuro Rachunkowe Alfa"
+          ],
+          "zrodla": [
+            "https://panoramafirm.pl/ksiegowosc/poznań",
+            "https://www.gowork.pl/firmy/ksiegowosc/poznan"
+          ]
+        }
+      }
+    },
+    {
+      "id": "P05",
+      "kategoria": "ranking",
+      "tresc": "najlepsze biura rachunkowe w Poznaniu 2026 ranking",
+      "wyniki": {
+        "wyszukiwanie": {
+          "zapytania": [
+            "ranking biur rachunkowych Poznań 2026"
+          ],
+          "firmy": [
+            "Biuro Rachunkowe Alfa",
+            "Delta Finanse",
+            "Księgowość Gamma",
+            "Omega Księgowi",
+            "Biuro Rachunkowe Kalkulus"
+          ],
+          "zrodla": [
+            "https://rankingi-przyklad.pl/biura-rachunkowe-poznan",
+            "https://panoramafirm.pl/biura_rachunkowe/poznań",
+            "https://www.google.com/maps/search/biura+rachunkowe+poznań"
+          ]
+        },
+        "pamiec": {
+          "firmy": [
+            "Biuro Rachunkowe Alfa",
+            "Delta Finanse"
+          ]
+        }
+      }
+    },
+    {
+      "id": "P06",
+      "kategoria": "ranking",
+      "tresc": "top 10 biur księgowych w Wielkopolsce",
+      "wyniki": {
+        "wyszukiwanie": {
+          "zapytania": [
+            "najlepsze biura księgowe Wielkopolska"
+          ],
+          "firmy": [
+            "Delta Finanse sp. z o.o.",
+            "Biuro Rachunkowe Alfa",
+            "Sigma Rachunkowość"
+          ],
+          "zrodla": [
+            "https://rankingi-przyklad.pl/wielkopolska",
+            "https://www.aleo.com/pl/firmy/biura-rachunkowe/wielkopolskie"
+          ]
+        },
+        "pamiec": {
+          "firmy": [
+            "Delta Finanse"
+          ]
+        }
+      }
+    },
+    {
+      "id": "P07",
+      "kategoria": "kryteria",
+      "tresc": "tanie biuro rachunkowe Poznań do 300 zł miesięcznie dla JDG na ryczałcie",
+      "wyniki": {
+        "wyszukiwanie": {
+          "zapytania": [
+            "biuro rachunkowe Poznań ryczałt cena do 300 zł"
+          ],
+          "firmy": [
+            "Kalkulus",
+            "Omega Księgowi"
+          ],
+          "zrodla": [
+            "https://www.kalkulus-przyklad.pl/cennik",
+            "https://www.oferteo.pl/biura-rachunkowe/poznan/ceny"
+          ],
+          "notatka": "Cennik Kalkulusa był w wynikach na pierwszym miejscu."
+        },
+        "pamiec": {
+          "firmy": [],
+          "notatka": "Bez internetu nie znam konkretnych cen biur w Poznaniu."
+        }
+      }
+    },
+    {
+      "id": "P08",
+      "kategoria": "kryteria",
+      "tresc": "biuro rachunkowe w Poznaniu, które zna się na e-commerce i rozlicza sprzedaż na Allegro i Amazonie",
+      "wyniki": {
+        "wyszukiwanie": {
+          "zapytania": [
+            "biuro rachunkowe e-commerce Allegro Amazon Poznań"
+          ],
+          "firmy": [
+            "Sigma Rachunkowość",
+            "Delta Finanse"
+          ],
+          "zrodla": [
+            "https://sigma-przyklad.pl/ecommerce",
+            "https://rankingi-przyklad.pl/ksiegowosc-ecommerce"
+          ]
+        }
+      }
+    },
+    {
+      "id": "P09",
+      "kategoria": "alternatywy",
+      "tresc": "jakie są alternatywy dla Biura Rachunkowego Alfa w Poznaniu?",
+      "wyniki": {
+        "wyszukiwanie": {
+          "zapytania": [
+            "biura rachunkowe Poznań podobne do Alfa"
+          ],
+          "firmy": [
+            "Delta Finanse",
+            "Księgowość Gamma s.c.",
+            "Omega Księgowi"
+          ],
+          "zrodla": [
+            "https://panoramafirm.pl/biura_rachunkowe/poznań",
+            "https://www.gowork.pl/opinie/biuro-rachunkowe-alfa"
+          ]
+        }
+      }
+    },
+    {
+      "id": "P10",
+      "kategoria": "kryteria",
+      "tresc": "potrzebuję księgowej, która obsługuje spółki z o.o. i ogarnia kadry, Poznań",
+      "wyniki": {
+        "wyszukiwanie": {
+          "zapytania": [
+            "księgowość spółki z o.o. i kadry Poznań"
+          ],
+          "firmy": [
+            "Biuro Rachunkowe Alfa",
+            "Delta Finanse"
+          ],
+          "zrodla": [
+            "https://www.google.com/maps/search/księgowość+spółek+poznań",
+            "https://www.aleo.com/pl/firmy/ksiegowosc/poznan"
+          ]
+        }
+      }
+    },
+    {
+      "id": "P11",
+      "kategoria": "marka",
+      "tresc": "co wiesz o Biurze Rachunkowym Kalkulus z Poznania?",
+      "wyniki": {
+        "wyszukiwanie": {
+          "zapytania": [
+            "Biuro Rachunkowe Kalkulus Poznań"
+          ],
+          "firmy": [
+            "Biuro Rachunkowe Kalkulus"
+          ],
+          "zrodla": [
+            "https://www.kalkulus-przyklad.pl/o-nas",
+            "https://www.aleo.com/pl/firma/kalkulus"
+          ],
+          "poprawne": [
+            "Siedziba w Poznaniu",
+            "Obsługa JDG i małych spółek"
+          ],
+          "bledne": [
+            "Rok założenia 2009, a według strony firmy 2014"
+          ],
+          "brakujace": [
+            "Brak informacji o usługach kadrowo-płacowych"
+          ]
+        },
+        "pamiec": {
+          "firmy": [],
+          "brakujace": [
+            "Bez internetu nie mam żadnej wiedzy o tej firmie"
+          ]
+        }
+      }
+    },
+    {
+      "id": "P12",
+      "kategoria": "marka",
+      "tresc": "Kalkulus Poznań opinie",
+      "wyniki": {
+        "wyszukiwanie": {
+          "zapytania": [
+            "Kalkulus Poznań opinie"
+          ],
+          "firmy": [
+            "Kalkulus"
+          ],
+          "zrodla": [
+            "https://www.google.com/maps/place/kalkulus",
+            "https://www.gowork.pl/opinie/kalkulus"
+          ],
+          "poprawne": [
+            "Ocena 4,8 w Mapach Google na podstawie 37 opinii"
+          ]
+        }
+      }
+    }
+  ]
+}
